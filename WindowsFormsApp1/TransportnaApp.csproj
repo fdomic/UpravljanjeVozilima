@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4F84546-83D9-4CC9-88D6-BFA38424825A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TransportnaApp</RootNamespace>
+    <AssemblyName>TransportnaApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Baza\AbstraktnaTablica.cs" />
+    <Compile Include="Baza\TablicaDodjeljenaVozila.cs" />
+    <Compile Include="Baza\TablicaVozila.cs" />
+    <Compile Include="Baza\TablicaZaposleniciTip.cs" />
+    <Compile Include="Baza\TablicaZaposlenika.cs" />
+    <Compile Include="Forme\DodjelaVozilaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodjelaVozilaFrm.Designer.cs">
+      <DependentUpon>DodjelaVozilaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzbornikFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzbornikFrm.Designer.cs">
+      <DependentUpon>IzbornikFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\NaloziFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\NaloziFrm.Designer.cs">
+      <DependentUpon>NaloziFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PocetnaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PocetnaFrm.Designer.cs">
+      <DependentUpon>PocetnaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\VozilaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\VozilaFrm.Designer.cs">
+      <DependentUpon>VozilaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application.cs" />
+    <Compile Include="Forme\ZaposleniciFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniciFrm.Designer.cs">
+      <DependentUpon>ZaposleniciFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZauzetaVozilaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZauzetaVozilaFrm.Designer.cs">
+      <DependentUpon>ZauzetaVozilaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modeli\DodjelaVozila.cs" />
+    <Compile Include="Modeli\Vozilo.cs" />
+    <Compile Include="Modeli\ZaposlenikTip.cs" />
+    <Compile Include="Modeli\Zaposlenik.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Util.cs" />
+    <EmbeddedResource Include="Forme\DodjelaVozilaFrm.resx">
+      <DependentUpon>DodjelaVozilaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzbornikFrm.resx">
+      <DependentUpon>IzbornikFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\NaloziFrm.resx">
+      <DependentUpon>NaloziFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PocetnaFrm.resx">
+      <DependentUpon>PocetnaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\VozilaFrm.resx">
+      <DependentUpon>VozilaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniciFrm.resx">
+      <DependentUpon>ZaposleniciFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZauzetaVozilaFrm.resx">
+      <DependentUpon>ZauzetaVozilaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="UpravljanjeVozilimaDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
