@@ -15,6 +15,7 @@ namespace TransportnaApp.Forme
 {
     public partial class IzbornikFrm : Form
     {
+        //
         public IzbornikFrm()
         {
             InitializeComponent();
