@@ -35,7 +35,8 @@ namespace TransportnaApp.Baza
         {
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
             {
-                cnn.Execute("INSERT INTO Vozila (marka,tip,registracija) VALUES (@marka,@tip,@registracija)", v);
+                string sql = "INSERT INTO Vozila (marka,tip,registracija) VALUES (@marka,@tip,@registracija)";
+                cnn.Execute(sql, v);
             }
 
         }
@@ -48,7 +49,7 @@ namespace TransportnaApp.Baza
             }
         }
 
-        public static List<Vozilo> DohvatiSlobodnaVozila(double v1)
+        public static List<Vozilo> DohvatiZauzetaVozila(double v1)
         {
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
             {
@@ -56,8 +57,7 @@ namespace TransportnaApp.Baza
 
                 string sql = "";
                 sql += "SELECT * FROM Vozila LEFT JOIN Nalozi ON Vozila.id = Nalozi.idVozilo WHERE ";
-                sql += "Nalozi.datumPreuzimanja IS NULL OR ";
-                sql += "(" + v1 + " < Nalozi.datumPreuzimanja or " + v1 + " > Nalozi.datumDostave)";
+                sql += "(" + v1 + " >= Nalozi.datumPreuzimanja AND " + v1 + " <= Nalozi.datumDostave)";
 
 
                 var rezultati = cnn.Query<Vozilo>(sql);
@@ -65,12 +65,13 @@ namespace TransportnaApp.Baza
             }
         }
 
-        public static List<Vozilo> DohvatiSlobodne(double v1 ,double v2)
+        public static List<Vozilo> DohvatiSlobodne(double v1 ,double v2,int idVozilo)
         {
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
             {
                 string sql = "";
-                sql += "SELECT * FROM Vozila LEFT JOIN Nalozi ON Vozila.id = Nalozi.idVozilo WHERE ";
+                sql += "SELECT Vozila.* FROM Vozila LEFT JOIN Nalozi ON Vozila.id = Nalozi.idVozilo WHERE ";
+                if(idVozilo > 0)sql += "Nalozi.idVozilo = " + idVozilo + " OR ";
                 sql += "Nalozi.datumPreuzimanja IS NULL OR ";
                 sql += "((" + v1 + " < Nalozi.datumPreuzimanja or " + v1 + " > Nalozi.datumDostave) AND ";
                 sql += "( " + v2 + " < Nalozi.datumPreuzimanja or " + v2 + " > Nalozi.datumDostave))";

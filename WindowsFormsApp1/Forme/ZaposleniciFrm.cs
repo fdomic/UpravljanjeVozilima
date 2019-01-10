@@ -111,6 +111,13 @@ namespace TransportnaApp.Forme
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
+            bool ispravan = Util.ProvjeriOIB(tbOib.Text);
+            if (ispravan == false)
+            {
+                lbGreskaoOib.Visible = true;
+                return;
+            }
+
             Zaposlenik selektiranoZaposlenik = this.DohvatiSelekciju();
             if (selektiranoZaposlenik != null)
             {
@@ -124,6 +131,8 @@ namespace TransportnaApp.Forme
                 TablicaZaposlenika.Spremi(v);
             }
 
+
+            this.lbGreskaoOib.Visible = false;
             this.UcitajTablicu();
             this.PocistiFormu();
         }

@@ -20,12 +20,12 @@ namespace TransportnaApp.Forme
         public DodjelaVozilaFrm()
         {
             InitializeComponent();
-            this.NapuniListuRegistracija();
-            this.NapuniListuimePrezime();
         }
         
         private void DodjelaVozilaFrm_Load(object sender, EventArgs e)
         {
+            this.NapuniListuRegistracija();
+            this.NapuniListuimePrezime();
             this.KopirajModelUFormu(this.SelektiranNalog);
             this.DodjelaOvlasti();
         }
@@ -47,7 +47,13 @@ namespace TransportnaApp.Forme
             double v1 = Util.PretvoriDatumUtimestamp(Util.StartOfDay(dtPreuzimanje.Value));
             double v2 = Util.PretvoriDatumUtimestamp(Util.EndOfDay(dtDostave.Value));
 
-            List<Vozilo> vozila = TablicaVozila.DohvatiSlobodne(v1, v2);
+            int idVozilo = -1;
+            if(this.SelektiranNalog != null)
+            {
+                idVozilo = this.SelektiranNalog.idVozilo;
+            }
+
+            List<Vozilo> vozila = TablicaVozila.DohvatiSlobodne(v1, v2,idVozilo);
             cbReg.DataSource = vozila;
             cbReg.DisplayMember = "registracija";
         }
@@ -57,7 +63,13 @@ namespace TransportnaApp.Forme
             double v1 = Util.PretvoriDatumUtimestamp(Util.StartOfDay(dtPreuzimanje.Value));
             double v2 = Util.PretvoriDatumUtimestamp(Util.EndOfDay(dtDostave.Value));
 
-            List<Zaposlenik> Zaposlenik = TablicaZaposlenika.DohvatiSlobodnogVozaca(v1, v2);
+            int idZaposlenik = -1;
+            if (this.SelektiranNalog != null)
+            {
+                idZaposlenik = this.SelektiranNalog.idZaposlenik;
+            }
+
+            List<Zaposlenik> Zaposlenik = TablicaZaposlenika.DohvatiSlobodnogVozaca(v1, v2, idZaposlenik);
             cbImePrezime.DataSource = Zaposlenik;
             cbImePrezime.DisplayMember = "puniNaziv";
         }
@@ -106,8 +118,6 @@ namespace TransportnaApp.Forme
             dtDostave.Value = Util.PretvoriTmestampUdatum(v.datumDostave);
             cbImePrezime.SelectedItem = cbImePrezime.Items.Cast<Zaposlenik>().First(item => item.id == v.idZaposlenik);
             cbReg.SelectedItem = cbReg.Items.Cast<Vozilo>().First(item => item.id == v.idVozilo);
-
-
         }
         
         private void btSpremi_Click(object sender, EventArgs e)
@@ -133,11 +143,13 @@ namespace TransportnaApp.Forme
         private void dtPreuzimanje_ValueChanged(object sender, EventArgs e)
         {
             this.NapuniListuRegistracija();
+            this.NapuniListuimePrezime();
         }
 
         private void dtDostave_ValueChanged(object sender, EventArgs e)
         {
             this.NapuniListuRegistracija();
+            this.NapuniListuimePrezime();
         }
 
         private void btNazad_Click(object sender, EventArgs e)

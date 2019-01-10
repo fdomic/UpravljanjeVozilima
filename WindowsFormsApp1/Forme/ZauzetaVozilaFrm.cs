@@ -48,7 +48,7 @@ namespace TransportnaApp.Forme
 
             double v1 = Util.PretvoriDatumUtimestamp(Util.StartOfDay(dtDatum.Value));
             
-            List<Vozilo> vozila = TablicaVozila.DohvatiSlobodnaVozila(v1);
+            List<Vozilo> vozila = TablicaVozila.DohvatiZauzetaVozila(v1);
             dgvTablica.DataSource = vozila;
         }
 

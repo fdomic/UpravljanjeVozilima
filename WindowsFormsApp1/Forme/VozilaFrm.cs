@@ -18,26 +18,31 @@ namespace TransportnaApp.Forme
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            
+
+            this.GenerirajTablicu();
             this.UcitajTablicu();
         }
 
         private void GenerirajTablicu()
         {
             dgvTablica.AutoGenerateColumns = false;
-            dgvTablica.ColumnCount = 3;
+            dgvTablica.ColumnCount = 4;
 
-            dgvTablica.Columns[0].Name = "marka";
-            dgvTablica.Columns[0].HeaderText = "Marka";
-            dgvTablica.Columns[0].DataPropertyName = "marka";
+            dgvTablica.Columns[0].Name = "id";
+            dgvTablica.Columns[0].HeaderText = "#";
+            dgvTablica.Columns[0].DataPropertyName = "id";
 
-            dgvTablica.Columns[1].Name = "tip";
-            dgvTablica.Columns[1].HeaderText = "Tip";
-            dgvTablica.Columns[1].DataPropertyName = "tip";
+            dgvTablica.Columns[1].Name = "marka";
+            dgvTablica.Columns[1].HeaderText = "Marka";
+            dgvTablica.Columns[1].DataPropertyName = "marka";
 
-            dgvTablica.Columns[2].Name = "registracija";
-            dgvTablica.Columns[2].HeaderText = "Registracija";
-            dgvTablica.Columns[2].DataPropertyName = "registracija";
+            dgvTablica.Columns[2].Name = "tip";
+            dgvTablica.Columns[2].HeaderText = "Tip";
+            dgvTablica.Columns[2].DataPropertyName = "tip";
+
+            dgvTablica.Columns[3].Name = "registracija";
+            dgvTablica.Columns[3].HeaderText = "Registracija";
+            dgvTablica.Columns[3].DataPropertyName = "registracija";
         }
 
         private void UcitajTablicu()

@@ -57,12 +57,13 @@ namespace TransportnaApp.Baza
             }
         }
 
-        public static List<Zaposlenik> DohvatiSlobodnogVozaca(double v1, double v2)
+        public static List<Zaposlenik> DohvatiSlobodnogVozaca(double v1, double v2, int idZaposlenik)
         {
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
             {
                 string sql = "";
-                sql += "SELECT * FROM Zaposlenici LEFT JOIN Nalozi ON Zaposlenici.id = Nalozi.idZaposlenik WHERE ";
+                sql += "SELECT Zaposlenici.* FROM Zaposlenici LEFT JOIN Nalozi ON Zaposlenici.id = Nalozi.idZaposlenik WHERE ";
+                if(idZaposlenik > 0) sql += "Nalozi.idZaposlenik = "+ idZaposlenik + " OR ";
                 sql += "Nalozi.datumPreuzimanja IS NULL OR ";
                 sql += "((" + v1 + " < Nalozi.datumPreuzimanja or " + v1 + " > Nalozi.datumDostave) AND ";
                 sql += "( " + v2 + " < Nalozi.datumPreuzimanja or " + v2 + " > Nalozi.datumDostave))";

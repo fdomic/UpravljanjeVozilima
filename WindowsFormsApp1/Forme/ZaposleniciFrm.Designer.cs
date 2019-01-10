@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZaposleniciFrm));
             this.btnNazad = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbGreskaoOib = new System.Windows.Forms.Label();
             this.btnObrisi = new System.Windows.Forms.Button();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,6 +44,7 @@
             this.cbTip = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lbGreskaoOib = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvTablica = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -80,18 +80,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(370, 650);
             this.panel1.TabIndex = 1;
-            // 
-            // lbGreskaoOib
-            // 
-            this.lbGreskaoOib.AutoSize = true;
-            this.lbGreskaoOib.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGreskaoOib.ForeColor = System.Drawing.Color.Red;
-            this.lbGreskaoOib.Location = new System.Drawing.Point(60, 778);
-            this.lbGreskaoOib.Name = "lbGreskaoOib";
-            this.lbGreskaoOib.Size = new System.Drawing.Size(252, 38);
-            this.lbGreskaoOib.TabIndex = 7;
-            this.lbGreskaoOib.Text = "Neispravan Oib!";
-            this.lbGreskaoOib.Visible = false;
             // 
             // btnObrisi
             // 
@@ -216,7 +204,7 @@
             // 
             this.cbTip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbTip.FormattingEnabled = true;
-            this.cbTip.Location = new System.Drawing.Point(142, 154);
+            this.cbTip.Location = new System.Drawing.Point(142, 153);
             this.cbTip.Name = "cbTip";
             this.cbTip.Size = new System.Drawing.Size(155, 24);
             this.cbTip.TabIndex = 9;
@@ -244,6 +232,18 @@
             this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Datum:";
+            // 
+            // lbGreskaoOib
+            // 
+            this.lbGreskaoOib.AutoSize = true;
+            this.lbGreskaoOib.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGreskaoOib.ForeColor = System.Drawing.Color.Red;
+            this.lbGreskaoOib.Location = new System.Drawing.Point(60, 778);
+            this.lbGreskaoOib.Name = "lbGreskaoOib";
+            this.lbGreskaoOib.Size = new System.Drawing.Size(252, 38);
+            this.lbGreskaoOib.TabIndex = 7;
+            this.lbGreskaoOib.Text = "Neispravan Oib!";
+            this.lbGreskaoOib.Visible = false;
             // 
             // panel2
             // 
