@@ -9,9 +9,7 @@ namespace TransportnaApp.Modeli
     public class Vozilo
     {
         public int id { get; set; }
-
-        public int idZauzetoVozilo { get; set; }
-
+        
         public string marka { get; set; }
 
         public string tip { get; set; }

@@ -15,7 +15,7 @@ namespace TransportnaApp.Forme
 {
     public partial class IzbornikFrm : Form
     {
-        //
+        
         public IzbornikFrm()
         {
             InitializeComponent();
@@ -38,10 +38,15 @@ namespace TransportnaApp.Forme
             Zaposlenik z = ((PocetnaFrm)MdiParent).prijavljeniZaposlenik;
             if (z.tipFK != 1)
             {
-                btnDodjelaVozila.Visible = false;
+                btnIzradaNaloga.Visible = false;
                 btnVozila.Visible = false;
                 btnVozaci.Visible = false;
+                btnDodVozila.Visible = false;
+
+                panel2.Visible = false;
+                panel6.Visible = false;
                 panel8.Visible = false;
+
             }
 
         }

@@ -44,7 +44,7 @@ namespace TransportnaApp.Baza
         {
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
             {
-                cnn.Execute("INSERT INTO Zaposlenici (ime,prezime,oib,datumRod,tipFK) VALUES (@ime,@prezime,@oib,@datumRod,@tipFK)", v);//KADA ZA OIB NAPISEMO NULL SRUSI SE!!!
+                cnn.Execute("INSERT INTO Zaposlenici (ime,prezime,oib,datumRod,tipFK) VALUES (@ime,@prezime,@oib,@datumRod,@tipFK)", v);
             }
 
         }
@@ -53,7 +53,22 @@ namespace TransportnaApp.Baza
         {
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
             {
-                cnn.Execute("UPDATE Zaposlenici SET ime=@ime, prezime=@prezime, oib=@oib, datumRod=@datumRod, tipFK=@tipFK WHERE id=@id", v);//KADA ZA OIB NAPISEMO NULL SRUSI SE!!!
+                cnn.Execute("UPDATE Zaposlenici SET ime=@ime, prezime=@prezime, oib=@oib, datumRod=@datumRod, tipFK=@tipFK WHERE id=@id", v);
+            }
+        }
+
+        public static List<Zaposlenik> DohvatiSlobodnogVozaca(double v1, double v2)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
+            {
+                string sql = "";
+                sql += "SELECT * FROM Zaposlenici LEFT JOIN Nalozi ON Zaposlenici.id = Nalozi.idZaposlenik WHERE ";
+                sql += "Nalozi.datumPreuzimanja IS NULL OR ";
+                sql += "((" + v1 + " < Nalozi.datumPreuzimanja or " + v1 + " > Nalozi.datumDostave) AND ";
+                sql += "( " + v2 + " < Nalozi.datumPreuzimanja or " + v2 + " > Nalozi.datumDostave))";
+
+                var rezultati = cnn.Query<Zaposlenik>(sql);
+                return rezultati.ToList();
             }
         }
 

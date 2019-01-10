@@ -30,7 +30,7 @@ namespace TransportnaApp.Baza
                 return rezultati.FirstOrDefault();
             }
         }
-
+        
         public static void Spremi(Vozilo v)
         {
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
@@ -45,6 +45,23 @@ namespace TransportnaApp.Baza
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
             {
                 cnn.Execute("UPDATE Vozila SET marka=@marka, tip=@tip ,registracija=@registracija WHERE id=@id", v);
+            }
+        }
+
+        public static List<Vozilo> DohvatiSlobodnaVozila(double v1)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
+            {
+
+
+                string sql = "";
+                sql += "SELECT * FROM Vozila LEFT JOIN Nalozi ON Vozila.id = Nalozi.idVozilo WHERE ";
+                sql += "Nalozi.datumPreuzimanja IS NULL OR ";
+                sql += "(" + v1 + " < Nalozi.datumPreuzimanja or " + v1 + " > Nalozi.datumDostave)";
+
+
+                var rezultati = cnn.Query<Vozilo>(sql);
+                return rezultati.ToList();
             }
         }
 

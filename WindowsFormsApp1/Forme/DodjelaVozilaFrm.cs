@@ -42,11 +42,6 @@ namespace TransportnaApp.Forme
 
         }
 
-        private void btNazad_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void NapuniListuRegistracija()
         {
             double v1 = Util.PretvoriDatumUtimestamp(Util.StartOfDay(dtPreuzimanje.Value));
@@ -59,7 +54,10 @@ namespace TransportnaApp.Forme
 
         private void NapuniListuimePrezime()
         {
-            List<Zaposlenik> Zaposlenik = TablicaZaposlenika.DohvatiSlobodnogVozaca();
+            double v1 = Util.PretvoriDatumUtimestamp(Util.StartOfDay(dtPreuzimanje.Value));
+            double v2 = Util.PretvoriDatumUtimestamp(Util.EndOfDay(dtDostave.Value));
+
+            List<Zaposlenik> Zaposlenik = TablicaZaposlenika.DohvatiSlobodnogVozaca(v1, v2);
             cbImePrezime.DataSource = Zaposlenik;
             cbImePrezime.DisplayMember = "puniNaziv";
         }
@@ -140,6 +138,11 @@ namespace TransportnaApp.Forme
         private void dtDostave_ValueChanged(object sender, EventArgs e)
         {
             this.NapuniListuRegistracija();
+        }
+
+        private void btNazad_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
  

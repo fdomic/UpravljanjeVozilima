@@ -35,13 +35,15 @@ namespace TransportnaApp.Forme
             this.btnVozila = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnDodVozila = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.lblImeKorisnika = new System.Windows.Forms.Label();
             this.btnNalozi = new System.Windows.Forms.Button();
             this.btnVozaci = new System.Windows.Forms.Button();
             this.btOdjava = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btnDodjelaVozila = new System.Windows.Forms.Button();
+            this.btnIzradaNaloga = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,8 +51,6 @@ namespace TransportnaApp.Forme
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnZVozila = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -64,9 +64,10 @@ namespace TransportnaApp.Forme
             this.btnVozila.ForeColor = System.Drawing.Color.Transparent;
             this.btnVozila.Image = ((System.Drawing.Image)(resources.GetObject("btnVozila.Image")));
             this.btnVozila.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVozila.Location = new System.Drawing.Point(13, 539);
+            this.btnVozila.Location = new System.Drawing.Point(10, 437);
+            this.btnVozila.Margin = new System.Windows.Forms.Padding(2);
             this.btnVozila.Name = "btnVozila";
-            this.btnVozila.Size = new System.Drawing.Size(239, 75);
+            this.btnVozila.Size = new System.Drawing.Size(179, 61);
             this.btnVozila.TabIndex = 1;
             this.btnVozila.Text = "Vozila";
             this.btnVozila.UseVisualStyleBackColor = true;
@@ -75,9 +76,10 @@ namespace TransportnaApp.Forme
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-19, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(-14, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(275, 159);
+            this.pictureBox1.Size = new System.Drawing.Size(206, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -85,16 +87,16 @@ namespace TransportnaApp.Forme
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel3.Controls.Add(this.btnZVozila);
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.lblImeKorisnika);
-            this.panel3.Controls.Add(this.btnNalozi);
+            this.panel3.Controls.Add(this.btnDodVozila);
             this.panel3.Controls.Add(this.btnVozila);
+            this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.btnVozaci);
+            this.panel3.Controls.Add(this.lblImeKorisnika);
+            this.panel3.Controls.Add(this.btnIzradaNaloga);
+            this.panel3.Controls.Add(this.btnNalozi);
             this.panel3.Controls.Add(this.btOdjava);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel10);
-            this.panel3.Controls.Add(this.btnDodjelaVozila);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
@@ -103,19 +105,46 @@ namespace TransportnaApp.Forme
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel3.Location = new System.Drawing.Point(-4, -2);
+            this.panel3.Location = new System.Drawing.Point(-3, -2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(256, 952);
+            this.panel3.Size = new System.Drawing.Size(192, 774);
             this.panel3.TabIndex = 4;
+            // 
+            // btnDodVozila
+            // 
+            this.btnDodVozila.FlatAppearance.BorderSize = 0;
+            this.btnDodVozila.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDodVozila.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodVozila.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDodVozila.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDodVozila.Location = new System.Drawing.Point(10, 509);
+            this.btnDodVozila.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDodVozila.Name = "btnDodVozila";
+            this.btnDodVozila.Size = new System.Drawing.Size(179, 61);
+            this.btnDodVozila.TabIndex = 16;
+            this.btnDodVozila.Text = "Dojeljena vozila";
+            this.btnDodVozila.UseVisualStyleBackColor = true;
+            this.btnDodVozila.Click += new System.EventHandler(this.btnZVozila_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(12, 504);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(165, 1);
+            this.panel6.TabIndex = 11;
             // 
             // lblImeKorisnika
             // 
             this.lblImeKorisnika.AutoSize = true;
             this.lblImeKorisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImeKorisnika.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblImeKorisnika.Location = new System.Drawing.Point(87, 202);
+            this.lblImeKorisnika.Location = new System.Drawing.Point(65, 164);
+            this.lblImeKorisnika.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImeKorisnika.Name = "lblImeKorisnika";
-            this.lblImeKorisnika.Size = new System.Drawing.Size(79, 29);
+            this.lblImeKorisnika.Size = new System.Drawing.Size(60, 24);
             this.lblImeKorisnika.TabIndex = 15;
             this.lblImeKorisnika.Text = "label2";
             // 
@@ -127,9 +156,10 @@ namespace TransportnaApp.Forme
             this.btnNalozi.ForeColor = System.Drawing.Color.White;
             this.btnNalozi.Image = ((System.Drawing.Image)(resources.GetObject("btnNalozi.Image")));
             this.btnNalozi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNalozi.Location = new System.Drawing.Point(13, 271);
+            this.btnNalozi.Location = new System.Drawing.Point(10, 220);
+            this.btnNalozi.Margin = new System.Windows.Forms.Padding(2);
             this.btnNalozi.Name = "btnNalozi";
-            this.btnNalozi.Size = new System.Drawing.Size(239, 75);
+            this.btnNalozi.Size = new System.Drawing.Size(179, 61);
             this.btnNalozi.TabIndex = 13;
             this.btnNalozi.Text = "Nalozi";
             this.btnNalozi.UseVisualStyleBackColor = true;
@@ -143,9 +173,10 @@ namespace TransportnaApp.Forme
             this.btnVozaci.ForeColor = System.Drawing.Color.White;
             this.btnVozaci.Image = ((System.Drawing.Image)(resources.GetObject("btnVozaci.Image")));
             this.btnVozaci.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVozaci.Location = new System.Drawing.Point(16, 451);
+            this.btnVozaci.Location = new System.Drawing.Point(10, 367);
+            this.btnVozaci.Margin = new System.Windows.Forms.Padding(2);
             this.btnVozaci.Name = "btnVozaci";
-            this.btnVozaci.Size = new System.Drawing.Size(239, 75);
+            this.btnVozaci.Size = new System.Drawing.Size(179, 61);
             this.btnVozaci.TabIndex = 2;
             this.btnVozaci.Text = "     Zaposlenici";
             this.btnVozaci.UseVisualStyleBackColor = true;
@@ -159,9 +190,10 @@ namespace TransportnaApp.Forme
             this.btOdjava.ForeColor = System.Drawing.Color.White;
             this.btOdjava.Image = ((System.Drawing.Image)(resources.GetObject("btOdjava.Image")));
             this.btOdjava.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btOdjava.Location = new System.Drawing.Point(13, 756);
+            this.btOdjava.Location = new System.Drawing.Point(10, 614);
+            this.btOdjava.Margin = new System.Windows.Forms.Padding(2);
             this.btOdjava.Name = "btOdjava";
-            this.btOdjava.Size = new System.Drawing.Size(239, 75);
+            this.btOdjava.Size = new System.Drawing.Size(179, 61);
             this.btOdjava.TabIndex = 14;
             this.btOdjava.Text = "Odjava";
             this.btOdjava.UseVisualStyleBackColor = true;
@@ -172,125 +204,112 @@ namespace TransportnaApp.Forme
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(11, 202);
+            this.label1.Location = new System.Drawing.Point(8, 164);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 29);
+            this.label1.Size = new System.Drawing.Size(54, 24);
             this.label1.TabIndex = 12;
             this.label1.Text = "User:";
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(16, 268);
+            this.panel10.Location = new System.Drawing.Point(12, 218);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(220, 1);
+            this.panel10.Size = new System.Drawing.Size(165, 1);
             this.panel10.TabIndex = 11;
             // 
-            // btnDodjelaVozila
+            // btnIzradaNaloga
             // 
-            this.btnDodjelaVozila.FlatAppearance.BorderSize = 0;
-            this.btnDodjelaVozila.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDodjelaVozila.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodjelaVozila.ForeColor = System.Drawing.Color.White;
-            this.btnDodjelaVozila.Image = ((System.Drawing.Image)(resources.GetObject("btnDodjelaVozila.Image")));
-            this.btnDodjelaVozila.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDodjelaVozila.Location = new System.Drawing.Point(13, 363);
-            this.btnDodjelaVozila.Name = "btnDodjelaVozila";
-            this.btnDodjelaVozila.Size = new System.Drawing.Size(239, 75);
-            this.btnDodjelaVozila.TabIndex = 3;
-            this.btnDodjelaVozila.Text = "      Dodjela Vozila";
-            this.btnDodjelaVozila.UseVisualStyleBackColor = true;
-            this.btnDodjelaVozila.Click += new System.EventHandler(this.btnDodjelaVozila_Click);
+            this.btnIzradaNaloga.FlatAppearance.BorderSize = 0;
+            this.btnIzradaNaloga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzradaNaloga.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIzradaNaloga.ForeColor = System.Drawing.Color.White;
+            this.btnIzradaNaloga.Image = ((System.Drawing.Image)(resources.GetObject("btnIzradaNaloga.Image")));
+            this.btnIzradaNaloga.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIzradaNaloga.Location = new System.Drawing.Point(10, 293);
+            this.btnIzradaNaloga.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIzradaNaloga.Name = "btnIzradaNaloga";
+            this.btnIzradaNaloga.Size = new System.Drawing.Size(179, 61);
+            this.btnIzradaNaloga.TabIndex = 3;
+            this.btnIzradaNaloga.Text = "        Izrada naloga";
+            this.btnIzradaNaloga.UseVisualStyleBackColor = true;
+            this.btnIzradaNaloga.Click += new System.EventHandler(this.btnDodjelaVozila_Click);
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(16, 532);
+            this.panel8.Location = new System.Drawing.Point(12, 432);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(220, 1);
+            this.panel8.Size = new System.Drawing.Size(165, 1);
             this.panel8.TabIndex = 10;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(16, 444);
+            this.panel2.Location = new System.Drawing.Point(12, 361);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 1);
+            this.panel2.Size = new System.Drawing.Size(165, 1);
             this.panel2.TabIndex = 9;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(16, 356);
+            this.panel1.Location = new System.Drawing.Point(12, 289);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 1);
+            this.panel1.Size = new System.Drawing.Size(165, 1);
             this.panel1.TabIndex = 5;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel9.Location = new System.Drawing.Point(16, 92);
+            this.panel9.Location = new System.Drawing.Point(12, 75);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 1);
+            this.panel9.Size = new System.Drawing.Size(150, 1);
             this.panel9.TabIndex = 7;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel7.Location = new System.Drawing.Point(16, 437);
+            this.panel7.Location = new System.Drawing.Point(12, 355);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 1);
+            this.panel7.Size = new System.Drawing.Size(150, 1);
             this.panel7.TabIndex = 8;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(16, 261);
+            this.panel4.Location = new System.Drawing.Point(12, 212);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 1);
+            this.panel4.Size = new System.Drawing.Size(150, 1);
             this.panel4.TabIndex = 6;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 1);
+            this.panel5.Size = new System.Drawing.Size(150, 1);
             this.panel5.TabIndex = 7;
-            // 
-            // btnZVozila
-            // 
-            this.btnZVozila.FlatAppearance.BorderSize = 0;
-            this.btnZVozila.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZVozila.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZVozila.ForeColor = System.Drawing.Color.Transparent;
-            this.btnZVozila.Image = ((System.Drawing.Image)(resources.GetObject("btnZVozila.Image")));
-            this.btnZVozila.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnZVozila.Location = new System.Drawing.Point(13, 627);
-            this.btnZVozila.Name = "btnZVozila";
-            this.btnZVozila.Size = new System.Drawing.Size(239, 75);
-            this.btnZVozila.TabIndex = 16;
-            this.btnZVozila.Text = "   zauzeta vozila";
-            this.btnZVozila.UseVisualStyleBackColor = true;
-            this.btnZVozila.Click += new System.EventHandler(this.btnZVozila_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(16, 620);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(220, 1);
-            this.panel6.TabIndex = 11;
             // 
             // IzbornikFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(55)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1182, 853);
+            this.ClientSize = new System.Drawing.Size(886, 687);
             this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "IzbornikFrm";
             this.Text = "IzbornikFrm";
             this.Load += new System.EventHandler(this.IzbornikFrm_Loaded);
@@ -310,7 +329,7 @@ namespace TransportnaApp.Forme
         #endregion
         private System.Windows.Forms.Button btnVozila;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnDodjelaVozila;
+        private System.Windows.Forms.Button btnIzradaNaloga;
         private System.Windows.Forms.Button btnVozaci;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
@@ -325,7 +344,7 @@ namespace TransportnaApp.Forme
         private Button btnNalozi;
         private Button btOdjava;
         private Label lblImeKorisnika;
-        private Button btnZVozila;
+        private Button btnDodVozila;
         private Panel panel6;
     }
 }
