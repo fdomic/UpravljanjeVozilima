@@ -53,12 +53,9 @@ namespace TransportnaApp.Baza
         {
             using (IDbConnection cnn = new SQLiteConnection(Konfiguracija()))
             {
-
-
                 string sql = "";
                 sql += "SELECT * FROM Vozila LEFT JOIN Nalozi ON Vozila.id = Nalozi.idVozilo WHERE ";
                 sql += "(" + v1 + " >= Nalozi.datumPreuzimanja AND " + v1 + " <= Nalozi.datumDostave)";
-
 
                 var rezultati = cnn.Query<Vozilo>(sql);
                 return rezultati.ToList();
