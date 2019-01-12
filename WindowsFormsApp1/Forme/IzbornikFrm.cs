@@ -42,7 +42,7 @@ namespace TransportnaApp.Forme
                 btnVozila.Visible = false;
                 btnVozaci.Visible = false;
                 btnDodVozila.Visible = false;
-
+                
                 panel2.Visible = false;
                 panel6.Visible = false;
                 panel8.Visible = false;
@@ -100,6 +100,13 @@ namespace TransportnaApp.Forme
         private void btnZVozila_Click(object sender, EventArgs e)
         {
             Form login = new ZauzetaVozilaFrm();
+            login.MdiParent = this.MdiParent;
+            login.Show();
+        }
+
+        private void btPutniNalog_Click(object sender, EventArgs e)
+        {
+            Form login = new NalogZaSluzbenoPutovanjefrm();
             login.MdiParent = this.MdiParent;
             login.Show();
         }
