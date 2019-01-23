@@ -52,9 +52,9 @@ namespace TransportnaApp.Forme
 
         private void PocistiFormu()
         {
-            tbRazlog.Text = "" +
-                "";
-            tbTeret.Text  = "";
+            tbRazlog.Text   = "";
+            tbBRNaloga.Text = "";
+            tbTeret.Text    = "";
             
             this.PonistiSelekciju();
         }
@@ -65,6 +65,7 @@ namespace TransportnaApp.Forme
 
             n.razlog = tbRazlog.Text;
             n.teret = tbTeret.Text;
+            n.idNalog = tbBRNaloga.Text;
 
             return n;
         }
@@ -73,6 +74,7 @@ namespace TransportnaApp.Forme
         {
             tbRazlog.Text = v.razlog ;
             tbTeret.Text= v.teret ;
+            tbBRNaloga.Text = v.idNalog;
 
         }
 
@@ -146,5 +148,6 @@ namespace TransportnaApp.Forme
             NalogZaSluzbenoPutovanje v = this.DohvatiSelekciju();
             this.KopirajModelUFormu(v);
         }
+
     }
 }

@@ -59,6 +59,7 @@
             this.tbTip = new System.Windows.Forms.TextBox();
             this.cbReg = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btPutniNalog = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -286,7 +287,7 @@
             // 
             this.cbImePrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbImePrezime.FormattingEnabled = true;
-            this.cbImePrezime.Location = new System.Drawing.Point(166, 31);
+            this.cbImePrezime.Location = new System.Drawing.Point(166, 37);
             this.cbImePrezime.Name = "cbImePrezime";
             this.cbImePrezime.Size = new System.Drawing.Size(195, 37);
             this.cbImePrezime.TabIndex = 0;
@@ -395,7 +396,7 @@
             // 
             this.cbReg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbReg.FormattingEnabled = true;
-            this.cbReg.Location = new System.Drawing.Point(160, 27);
+            this.cbReg.Location = new System.Drawing.Point(160, 21);
             this.cbReg.Name = "cbReg";
             this.cbReg.Size = new System.Drawing.Size(204, 37);
             this.cbReg.TabIndex = 1;
@@ -411,12 +412,27 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Marka";
             // 
+            // btPutniNalog
+            // 
+            this.btPutniNalog.BackColor = System.Drawing.Color.DarkGray;
+            this.btPutniNalog.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPutniNalog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPutniNalog.Location = new System.Drawing.Point(718, 766);
+            this.btPutniNalog.Name = "btPutniNalog";
+            this.btPutniNalog.Size = new System.Drawing.Size(194, 65);
+            this.btPutniNalog.TabIndex = 2;
+            this.btPutniNalog.Text = "Putni nalog";
+            this.btPutniNalog.UseVisualStyleBackColor = false;
+            this.btPutniNalog.Visible = false;
+            this.btPutniNalog.Click += new System.EventHandler(this.btPutniNalog_Click);
+            // 
             // DodjelaVozilaFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1182, 853);
+            this.Controls.Add(this.btPutniNalog);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btNazad);
             this.Name = "DodjelaVozilaFrm";
@@ -468,5 +484,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btPutniNalog;
     }
 }

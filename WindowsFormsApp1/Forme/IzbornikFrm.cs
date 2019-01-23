@@ -30,9 +30,7 @@ namespace TransportnaApp.Forme
             this.DodjelaOvlasti();
 
         }
-
-
-
+        
         private void DodjelaOvlasti()
         {
             Zaposlenik z = ((PocetnaFrm)MdiParent).prijavljeniZaposlenik;
@@ -46,7 +44,7 @@ namespace TransportnaApp.Forme
                 panel2.Visible = false;
                 panel6.Visible = false;
                 panel8.Visible = false;
-
+                panel12.Visible = false;
             }
 
         }

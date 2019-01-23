@@ -38,6 +38,7 @@ namespace TransportnaApp.Forme
                 btSpremi.Visible = false;
                 cbImePrezime.Enabled = false;
                 cbReg.Enabled = false;
+                btPutniNalog.Visible = true;
             }
 
         }
@@ -155,6 +156,16 @@ namespace TransportnaApp.Forme
         private void btNazad_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btPutniNalog_Click(object sender, EventArgs e)
+        {
+
+            Form login = new NalogZaSluzbenoPutovanjefrm();
+            login.MdiParent = this.MdiParent;
+           
+            login.Show();
+
         }
     }
  

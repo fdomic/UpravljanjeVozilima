@@ -35,9 +35,12 @@ namespace TransportnaApp.Forme
             this.btnVozila = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDodVozila = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.btPutniNalog = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.btnVozaci = new System.Windows.Forms.Button();
+            this.btnDodVozila = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.lblImeKorisnika = new System.Windows.Forms.Label();
             this.btnIzradaNaloga = new System.Windows.Forms.Button();
             this.btnNalozi = new System.Windows.Forms.Button();
@@ -51,9 +54,6 @@ namespace TransportnaApp.Forme
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btPutniNalog = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -117,30 +117,31 @@ namespace TransportnaApp.Forme
             this.panel3.Size = new System.Drawing.Size(256, 953);
             this.panel3.TabIndex = 4;
             // 
-            // btnDodVozila
+            // btPutniNalog
             // 
-            this.btnDodVozila.FlatAppearance.BorderSize = 0;
-            this.btnDodVozila.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDodVozila.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodVozila.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDodVozila.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDodVozila.Location = new System.Drawing.Point(13, 692);
-            this.btnDodVozila.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDodVozila.Name = "btnDodVozila";
-            this.btnDodVozila.Size = new System.Drawing.Size(239, 75);
-            this.btnDodVozila.TabIndex = 16;
-            this.btnDodVozila.Text = "Dojeljena vozila";
-            this.btnDodVozila.UseVisualStyleBackColor = true;
-            this.btnDodVozila.Click += new System.EventHandler(this.btnZVozila_Click);
+            this.btPutniNalog.FlatAppearance.BorderSize = 0;
+            this.btPutniNalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPutniNalog.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPutniNalog.ForeColor = System.Drawing.Color.Transparent;
+            this.btPutniNalog.Image = ((System.Drawing.Image)(resources.GetObject("btPutniNalog.Image")));
+            this.btPutniNalog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPutniNalog.Location = new System.Drawing.Point(17, 361);
+            this.btPutniNalog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btPutniNalog.Name = "btPutniNalog";
+            this.btPutniNalog.Size = new System.Drawing.Size(239, 75);
+            this.btPutniNalog.TabIndex = 17;
+            this.btPutniNalog.Text = "    Putni Nalog";
+            this.btPutniNalog.UseVisualStyleBackColor = true;
+            this.btPutniNalog.Click += new System.EventHandler(this.btPutniNalog_Click);
             // 
-            // panel6
+            // panel12
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(16, 603);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(220, 1);
-            this.panel6.TabIndex = 11;
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(16, 687);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(220, 1);
+            this.panel12.TabIndex = 16;
             // 
             // btnVozaci
             // 
@@ -158,6 +159,40 @@ namespace TransportnaApp.Forme
             this.btnVozaci.Text = "     Zaposlenici";
             this.btnVozaci.UseVisualStyleBackColor = true;
             this.btnVozaci.Click += new System.EventHandler(this.btnVozaci_Click);
+            // 
+            // btnDodVozila
+            // 
+            this.btnDodVozila.FlatAppearance.BorderSize = 0;
+            this.btnDodVozila.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDodVozila.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodVozila.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDodVozila.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDodVozila.Location = new System.Drawing.Point(13, 692);
+            this.btnDodVozila.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDodVozila.Name = "btnDodVozila";
+            this.btnDodVozila.Size = new System.Drawing.Size(239, 75);
+            this.btnDodVozila.TabIndex = 16;
+            this.btnDodVozila.Text = "Dojeljena vozila";
+            this.btnDodVozila.UseVisualStyleBackColor = true;
+            this.btnDodVozila.Click += new System.EventHandler(this.btnZVozila_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(16, 768);
+            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(220, 1);
+            this.panel11.TabIndex = 12;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(16, 603);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(220, 1);
+            this.panel6.TabIndex = 11;
             // 
             // lblImeKorisnika
             // 
@@ -304,40 +339,6 @@ namespace TransportnaApp.Forme
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 1);
             this.panel5.TabIndex = 7;
-            // 
-            // btPutniNalog
-            // 
-            this.btPutniNalog.FlatAppearance.BorderSize = 0;
-            this.btPutniNalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPutniNalog.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPutniNalog.ForeColor = System.Drawing.Color.Transparent;
-            this.btPutniNalog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPutniNalog.Location = new System.Drawing.Point(3, 361);
-            this.btPutniNalog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btPutniNalog.Name = "btPutniNalog";
-            this.btPutniNalog.Size = new System.Drawing.Size(239, 75);
-            this.btPutniNalog.TabIndex = 17;
-            this.btPutniNalog.Text = "Putni Nalog";
-            this.btPutniNalog.UseVisualStyleBackColor = true;
-            this.btPutniNalog.Click += new System.EventHandler(this.btPutniNalog_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(16, 768);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(220, 1);
-            this.panel11.TabIndex = 12;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(16, 687);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(220, 1);
-            this.panel12.TabIndex = 16;
             // 
             // IzbornikFrm
             // 
